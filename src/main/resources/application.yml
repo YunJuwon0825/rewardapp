@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb         # H2 메모리 데이터베이스 설정
+    driver-class-name: org.h2.Driver # H2 데이터베이스 드라이버
+    username: sa                    # 기본 사용자명
+    password:                       # 비밀번호는 기본적으로 비워둡니다
+  h2:
+    console:
+      enabled: true                 # H2 콘솔 사용 설정 (웹으로 데이터 확인 가능)
+  jpa:
+    hibernate:
+      ddl-auto: update              # 애플리케이션 실행 시 엔티티에 따라 테이블 자동 생성 및 업데이트
+    show-sql: true                  # SQL 쿼리 출력 설정
+    properties:
+      hibernate:
+        format_sql: true            # SQL 쿼리 포맷 설정
